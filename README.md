@@ -1,9 +1,10 @@
 # back-to-China
 wulabing v2ray回国(内地)搭建 使用请遵守中国内地法律
 
-用finalshell在境外VPS上用 https://github.com/cchhuuaann1/httpproxy 脚本安装http代理 跑一遍wulabing的脚本 然后进入 /data/ 目录 把那两个v2ray证书下载下来(右击 下载) 在桌面上会有一个文件夹"fsdownload"在那里面 然后SSH登录境内VPS(NAT和独立IP都可以)创建 /data/ 目录 把那两个v2ray证书上传到 /data/ 去 给内地VPS挂http代理( `export http_proxy=http://ip:port export https_proxy=http://ip:port`) 接着在境内VPS上再跑一边跑wulabing的脚本 域名那里直接填当前IP回车 输入yes继续安装 宽口那块NAT的VPS填一个你可以使用的端口 独立IP的除了80/443以外的其他任意一个端口 跑完脚本后取消掉http代理 `unset http_proxy unset https_proxy` 
+用finalshell在境外VPS上用 https://github.com/cchhuuaann1/httpproxy 脚本安装http代理 跑一遍wulabing的脚本 然后进入 /data/ 目录 把那两个v2ray证书下载下来(右击 下载) 在桌面上会有一个文件夹"fsdownload"在那里面 然后SSH登录境内VPS(NAT和独立IP都可以)创建 /data/ 目录 把那两个v2ray证书上传到 /data/ 去 给内地VPS挂http代理( `export http_proxy=http://ip:port export https_proxy=http://ip:port`) 接着在境内VPS上再跑一边跑wulabing的脚本 域名那里直接填当前IP回车 输入yes继续安装 端口口那块NAT的VPS填一个你可以使用的端口 独立IP的除了80/443以外的其他任意一个端口 跑完脚本后取消掉http代理 `unset http_proxy unset https_proxy` 
 
 因为中国大陆的一些原因 VPS需要换源 我这里给换阿里云源的方法
+
 centos7换源
 
 `mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup`
